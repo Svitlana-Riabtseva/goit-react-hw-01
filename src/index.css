@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 h1,
@@ -10,32 +11,20 @@ h4,
 h5,
 h6,
 p {
-  margin: auto;
+  margin: 0;
 }
 
 ul,
 ol {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
-table {
-  width: 24%;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-th,
-td {
-  outline: 2px solid black;
-  padding: 3px;
-  text-align: center;
-}
-thead {
-  background-color: rgb(63, 61, 61);
-  color: white;
+
+li {
+  list-style: none;
 }
