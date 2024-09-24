@@ -1,30 +1,13 @@
-.list {
-  margin-top: 8px;
+.friendList {
   display: flex;
-  max-width: 375px;
-  min-width: 320px;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
 }
-
-.item {
+.friend {
   border: 2px solid black;
-  border-radius: 8px;
-  padding: 4px 6px;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 80px;
   text-align: center;
-  font-size: 12px;
-}
-
-.nameText {
-  margin-top: 8px;
-  font-size: 16px;
-}
-
-.statusOnlineText {
-  color: green;
-}
-
-.statusOfflineText {
-  color: red;
 }

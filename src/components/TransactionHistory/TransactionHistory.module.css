@@ -1,0 +1,9 @@
+.stringColor:nth-child(even) {
+  background-color: gray;
+}
+.stringColor:nth-child(2n + 1) {
+  background-color: white;
+}
+.firstLatter::first-letter {
+  text-transform: uppercase;
+}

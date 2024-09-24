@@ -1,32 +1,26 @@
-import TransactionsItem from "./TransactionsItem"
-import css from "./TransactionsHistory.module.css"
-import clsx from "clsx";
+import css from "./TransactionHistory.module.css";
+export default function TransactionHistory({ items }) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-const TransactionHistory = ({ transactions }) => {
-    return (
-        <table className={clsx(css.table)}>
-            <thead>
-                <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                {transactions.map((transaction) => {
-                    return <tr key={transaction.id}>
-                        <TransactionsItem
-                            type={transaction.type}
-                            amount={transaction.amount}
-                            currency={transaction.currency}
-                        />
-                    </tr>;
-                })}
-            </tbody>
-        </table>
-
-    )
+      <tbody className={css.stringColor}>
+        {items.map(function fn(item) {
+          return (
+            <tr key={item.id} className={css.stringColor}>
+              <td className={css.firstLatter}>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
 }
-
-export default TransactionHistory

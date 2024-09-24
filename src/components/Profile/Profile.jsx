@@ -1,32 +1,28 @@
-import clsx from "clsx"
-import css from "./Profile.module.css"
+import css from "../Profile/Profile.module.css";
+export default function Profile({ name, tag, location, image, stats }) {
+  return (
+    <div className={css.conteiner}>
+      <div>
+        <img className={css.avatar} src={image} alt={name} />
+        <p className={css.name}>{name}</p>
+        <p>&#64;{tag}</p>
+        <p>{location}</p>
+      </div>
 
-const Profile = ({ name, tag, location, image, stats }) => { 
-    return (
-        <div className={clsx(css.cart)}>
-            <div>
-                <img className={clsx(css.image)} src={image} alt="User avatar"/>
-                <p className={clsx(css.text, css.boldtext)}>{name}</p>
-                <p className={clsx(css.text, css.graytext)}>@{tag}</p>
-                <p className={clsx(css.text, css.graytext)}>{location}</p>
-            </div>
-
-            <ul className={clsx(css.stats)}>
-                <li className={clsx(css.statElement)}>
-                    <span>Followers</span>
-                    <span className={clsx(css.boldtext)}>{stats.followers}</span>
-                </li>
-                <li className={clsx(css.statElement, css.statElementCenter)}>
-                    <span>Views</span>
-                    <span className={clsx(css.boldtext)}>{stats.views}</span>
-                </li>
-                <li className={clsx(css.statElement)}>
-                    <span>Likes</span>
-                    <span className={clsx(css.boldtext)}>{stats.likes}</span>
-                </li>
-            </ul>
-        </div>
-    )
+      <ul className={css.list}>
+        <li className={css.item}>
+          <span>Followers</span>
+          <span className={css.stats}>{stats.followers}</span>
+        </li>
+        <li className={css.item}>
+          <span>Views</span>
+          <span className={css.stats}>{stats.views}</span>
+        </li>
+        <li className={css.item}>
+          <span>Likes</span>
+          <span className={css.stats}>{stats.likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
 }
-
-export default Profile

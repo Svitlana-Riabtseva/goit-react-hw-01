@@ -1,0 +1,12 @@
+.status {
+  font-size: small;
+}
+.isOnline:last-child {
+  color: green;
+}
+.isOfline:last-child {
+  color: red;
+}
+.friendName {
+  font-size: large;
+}
