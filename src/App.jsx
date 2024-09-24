@@ -4,10 +4,10 @@ import viteLogo from '/vite.svg';
 import '/src/App.css';
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
-import Transactionhistory from "./components/Transactionhistory/Transactionhistory";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import userData from "./userData.json";
 import friends from "./friends.json";
-import transactions from "./transactions.json"
+import transactions from "./transactions.json";
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
       <div>
         <h2>Work 3</h2>
           <>
-            <Transactionhistory transactions={transactions} />
+            <TransactionHistory transactions={transactions} />
           </>
       </div>
     </>
