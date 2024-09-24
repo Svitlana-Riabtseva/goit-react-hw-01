@@ -1,13 +1,17 @@
-import clsx from "clsx";
-import css from "./FriendListItem.module.css";
-export const FriendListItem = ({ avatar, name, isOnline }) => {
+import React from 'react';
+import styles from "./FriendListItem.module.css";
+
+
+
+function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div>
-      <img src={avatar} alt="Avatar" width="48" />
-      <p className={css.friendName}>{name}</p>
-      <p className={clsx(css.status, isOnline ? css.isOnline : css.isOfline)}>
-        {isOnline ? "Online" : "Ofline"}
-      </p>
+    <div className={styles.box}>
+      <img className={styles.avatar} src={avatar} alt={name} width="48" />
+      <p className={styles.name}>{name}</p>
+      <p className={isOnline ? styles.online : styles.offline}>{isOnline ? "Online" : "Offline"}</p>
     </div>
   );
-};
+}
+
+
+export default FriendListItem

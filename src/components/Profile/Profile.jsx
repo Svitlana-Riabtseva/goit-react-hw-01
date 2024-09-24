@@ -1,28 +1,34 @@
-import css from "../Profile/Profile.module.css";
-export default function Profile({ name, tag, location, image, stats }) {
-  return (
-    <div className={css.conteiner}>
-      <div>
-        <img className={css.avatar} src={image} alt={name} />
-        <p className={css.name}>{name}</p>
-        <p>&#64;{tag}</p>
-        <p>{location}</p>
-      </div>
+import React from 'react';
+import styles from "./Profile.module.css";
 
-      <ul className={css.list}>
-        <li className={css.item}>
-          <span>Followers</span>
-          <span className={css.stats}>{stats.followers}</span>
+
+
+const Profile = ({ username, avatar, tag, location, stats }) => {
+  const { followers, views, likes } = stats;
+
+  return (
+    <div className={styles.card}>
+      <div>
+        <img className={styles.avatar} src={avatar} alt={username} />
+        <p className={styles.name}>{username}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
+      <ul className={styles.list}>
+        <li className={styles.item}>
+          <span className={styles.title}>Followers</span>
+          <span className={styles.data}>{followers}</span>
         </li>
-        <li className={css.item}>
-          <span>Views</span>
-          <span className={css.stats}>{stats.views}</span>
+        <li className={styles.item}>
+          <span className={styles.title}>Views</span>
+          <span className={styles.data}>{views}</span>
         </li>
-        <li className={css.item}>
-          <span>Likes</span>
-          <span className={css.stats}>{stats.likes}</span>
+        <li className={styles.item}>
+          <span className={styles.title}>Likes</span>
+          <span className={styles.data}>{likes}</span>
         </li>
       </ul>
     </div>
   );
 }
+export default Profile;

@@ -1,12 +1,36 @@
-.status {
-  font-size: small;
+.box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(234, 229, 229);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 110px;
 }
-.isOnline:last-child {
+.avatar {
+  padding-top: 20px;
+  width: 50px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.name {
+  color: black;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.online {
   color: green;
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 20px;
 }
-.isOfline:last-child {
+.offline {
   color: red;
-}
-.friendName {
-  font-size: large;
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 20px;
 }
